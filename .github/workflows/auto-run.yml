@@ -2,8 +2,8 @@ name: Auto Submit Form
 
 on:
   schedule:
-    - cron: '27 13 * * *'
-  workflow_dispatch:      # bisa run manual juga
+    - cron: '34 13 * * *'  # 20:34 WIB
+  workflow_dispatch:
 
 jobs:
   run-script:
