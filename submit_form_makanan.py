@@ -20,7 +20,17 @@ NAMES = ["Cory","Rudi","Dharma","Aldi","Fariz M","Almas","Sabam","Indah", "Bu Ya
 s = requests.Session()
 
 html = s.get(FORM).text
-data = json.loads(re.search(r"FB_PUBLIC_LOAD_DATA_ = (.*?);</script>", html).group(1))
+match = re.search(r"FB_PUBLIC_LOAD_DATA_ = (.*?);</script>", html)
+
+if match:
+    try:
+        data = json.loads(match.group(1))
+    except Exception as e:
+        print("❌ GAGAL parsing JSON:", e)
+        exit(0)
+else:
+    print("❌ GAGAL: data form tidak ditemukan (regex tidak cocok)")
+    exit(0)
 
 makanan_list = []
 makanan_id = None
