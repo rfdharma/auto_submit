@@ -8,6 +8,7 @@ Original file is located at
 
 Kode Otomasi Submit Makanan
 """
+import datetime
 
 import requests, re, json, time
 
@@ -60,3 +61,5 @@ for i, n in enumerate(NAMES, 1):
     print(f"{i}. {n} | {makanan} -> {status}")
 
     time.sleep(0.7)
+
+print("RUN AT:", datetime.datetime.now())
