@@ -2,7 +2,7 @@ name: Auto Submit Form
 
 on:
   schedule:
-    - cron: '34 13 * * *'  # 20:34 WIB
+    - cron: '57 13 * * *'  # 20:57 WIB
   workflow_dispatch:
 
 jobs:
