@@ -2,8 +2,12 @@ name: Auto Submit Form
 
 on:
   schedule:
-    - cron: '15 14 * * *'  # 21:15 WIB
+    - cron: '0 * * * *'  # Berjalan setiap jam (menit ke-0)
   workflow_dispatch:
+
+# Tambahan untuk menghilangkan warning Node.js
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   run-script:
