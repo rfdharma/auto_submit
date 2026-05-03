@@ -2,10 +2,11 @@ name: Auto Submit Form
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Berjalan setiap jam (menit ke-0)
+    - cron: '50 16 * * 1-5'   # 16:30
+    - cron: '10 17 * * 1-5'   # 17:20
+    - cron: '20 17 * * 1-5'   # 17:40
   workflow_dispatch:
 
-# Tambahan untuk menghilangkan warning Node.js
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -27,5 +28,5 @@ jobs:
 
       - name: Run script
         env:
-            TZ: 'Asia/Jakarta'
+          TZ: 'Asia/Jakarta'
         run: python submit_form_makanan.py
