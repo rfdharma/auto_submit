@@ -2,9 +2,12 @@ name: Auto Submit Form
 
 on:
   schedule:
-  - cron: '50 9 * * 1-5'   # 16:50 WIB
-  - cron: '10 10 * * 1-5' # 17:10 WIB
-  - cron: '20 10 * * 1-5' # 17:20 WIB 
+on:
+  schedule:
+  - cron: '50 8 * * 1-5'   # 15:50 WIB
+  - cron: '10 9 * * 1-5'   # 16:10 WIB
+  - cron: '20 9 * * 1-5'   # 16:20 WIB
+  workflow_dispatch: # 17:20 WIB 
   workflow_dispatch:
 
 env:
