@@ -15,7 +15,7 @@ import requests, re, json, time
 FORM = "https://docs.google.com/forms/d/e/1FAIpQLSd0TFLM7S9QmunvL0BNNZFgjgPHJsqljAaXnTOlY5qBO6kT9w/viewform"
 POST = FORM.replace("viewform", "formResponse")
 
-NAMES = ["Cory","Rudi","Dharma","Aldi","Fariz M","Almas","Sabam","Indah", "Bu Yayah", "Milia"]
+NAMES = ["Cory","Rudi","Dharma","Aldi","Fariz M","Almas","Sabam","Indah", "Bu Yayah", "Milia","Marsa"]
 
 s = requests.Session()
 
